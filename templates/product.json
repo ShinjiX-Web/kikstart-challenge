@@ -146,7 +146,8 @@
       ],
       "custom_css": [
         ".multicolumn {background: #f7f8f5; padding: 60px 0;}",
-        "a,.inline-richtext{text-transform: uppercase; font-weight: 500;}"
+        "a,.inline-richtext {text-transform: uppercase; font-weight: 500; color: #294343;}",
+        "p {color: #8da3a2;}"
       ],
       "settings": {
         "title": "<strong>key ingredients<\/strong>",
