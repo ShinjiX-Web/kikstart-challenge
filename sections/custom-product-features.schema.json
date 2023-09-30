@@ -1,0 +1,38 @@
+{
+  "name": "Custom Product Features",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Name",
+          "id": "name"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Description",
+      "settings": [
+        {
+          "type": "textarea",
+          "label": "Description",
+          "id": "description"
+        }
+      ]
+    }
+  ]
+}
