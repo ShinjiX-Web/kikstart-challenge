@@ -25,20 +25,20 @@
   /* You need to implement the modal functionality separately */
 {% endstyle %}
 
+{%- unless section.settings.title == blank -%}
+  <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+    <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+      {{ section.settings.title }}
+    </h2>
+    {%- if section.settings.button_label != blank and show_mobile_slider -%}
+      <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
+        {{- section.settings.button_label | escape -}}
+      </a>
+    {%- endif -%}
+  </div>
+{%- endunless -%}
 <div class="container">
 
-  {%- unless section.settings.title == blank -%}
-    <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
-      <h2 class="title inline-richtext {{ section.settings.heading_size }}">
-        {{ section.settings.title }}
-      </h2>
-      {%- if section.settings.button_label != blank and show_mobile_slider -%}
-        <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
-          {{- section.settings.button_label | escape -}}
-        </a>
-      {%- endif -%}
-    </div>
-  {%- endunless -%}
   {% for block in section.blocks %}
     {% if block.settings.enable %}
       <div class="feature">
