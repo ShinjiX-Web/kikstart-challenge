@@ -102,7 +102,7 @@
           "settings": {
             "enable": true,
             "image": "shopify:\/\/shop_images\/Main_c8ff0b5d-c712-429a-be00-b29bd55cbc9d.jpg",
-            "name": "{{ product.metafields.custom.display_names.value.display_name.value }}",
+            "name": "{{ product.metafields.custom.display_names.value.name.value }}",
             "description": ""
           }
         },
@@ -111,7 +111,7 @@
           "settings": {
             "enable": true,
             "image": "shopify:\/\/shop_images\/Main_5127218a-8f6c-498f-b489-09242c0fab0a.jpg",
-            "name": "",
+            "name": "{{ product.metafields.custom.display_names.value.name.value }}",
             "description": ""
           }
         },
