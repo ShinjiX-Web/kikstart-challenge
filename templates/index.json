@@ -13,7 +13,7 @@
         "template--21144756846876__6194f399-c58a-416d-aa0d-176207146bad-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>This task aims to assess your qualifications in Shopify front-end development. Together with<br\/>our interviews, this evaluation will identify candidates who possess the technical expertise<br\/>needed to excel on the team.<\/p><p>Below is the section created needed for the task.<\/p>"
+            "text": "<p>This task aims to assess your qualifications in Shopify front-end development. Together with<br\/>our interviews, this evaluation will identify candidates who possess the technical expertise<br\/>needed to excel on the team.<\/p><p>Check product page where section is created or click here<\/p>"
           }
         }
       },
@@ -26,7 +26,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 100,
         "padding_bottom": 52
       }
     }
