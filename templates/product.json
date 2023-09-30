@@ -101,7 +101,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Mushroom-4.jpg",
-            "title": "Column",
+            "title": "Reishi Mushroom",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "Learn More",
             "link": ""
@@ -111,7 +111,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Mushroom-2.jpg",
-            "title": "Column",
+            "title": "Stinging Nettle",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "Learn More",
             "link": ""
@@ -121,7 +121,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Mushroom-1.jpg",
-            "title": "Column",
+            "title": "Gumweed",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "Learn More",
             "link": ""
@@ -131,7 +131,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Mushroom-3.jpg",
-            "title": "Column",
+            "title": "Eyebright",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "Learn More",
             "link": ""
