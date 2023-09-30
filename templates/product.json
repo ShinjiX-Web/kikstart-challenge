@@ -140,6 +140,9 @@
         "4f719ae5-4ce7-4cb4-a0fc-1347472ea1e7",
         "7c412c37-8380-4f79-a8ad-7d1f06cf00c0"
       ],
+      "custom_css": [
+        "div {background: blanchedalmond;}"
+      ],
       "settings": {
         "title": "Key Ingredients",
         "heading_size": "h1",
@@ -150,7 +153,7 @@
         "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
