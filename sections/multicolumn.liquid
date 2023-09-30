@@ -177,22 +177,25 @@ document.querySelectorAll('.open-modal').forEach(function(link) {
 
     const modalTrigger = this.getAttribute('data-modal-trigger');
 
-    // Define the modal content as HTML
+    // Fetch product information from the metaobject
+    const productInfo = JSON.parse("{{ product.metafields.product_info | json }}");
+
+    // Define the modal content using the retrieved data
     const modalContent = `
       <div class="modal-content">
         <div class="modal-header">
           <div class="modal-image-container">
-            <img src="https://kikstart-challenge.myshopify.com/cdn/shop/files/Mushroom-1.jpg?v=1696058867&width=100" class="modal-image" style="border-radius: 50%" width="100" height="100">
+            <img src="${productInfo.image_url}" alt="Circular Image" class="modal-image">
           </div>
           <div class="modal-title-container">
-            <h2 class="modal-title">${modalTrigger}Test Message</h2>
+            <h2 class="modal-title">${modalTrigger}</h2>
           </div>
         </div>
         <div class="modal-body">
-          <h3 class="modal-subtitle">Subtitle 1</h3>
-          <h3 class="modal-subtitle">Subtitle 2</h3>
+          <h3 class="modal-subtitle">${productInfo.subtitle_1}</h3>
+          <h3 class="modal-subtitle">${productInfo.subtitle_2}</h3>
           <p class="modal-description">
-            This is the main description text. You can customize it here.
+            ${productInfo.description}
           </p>
         </div>
       </div>
@@ -206,6 +209,7 @@ document.querySelectorAll('.open-modal').forEach(function(link) {
     });
   });
 });
+
 
 
 </script>
