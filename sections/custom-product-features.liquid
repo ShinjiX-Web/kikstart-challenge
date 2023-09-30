@@ -31,6 +31,9 @@
     border-bottom-width: 1px;
     width: fit-content;
   }
+  h3 {
+    text-transform: uppercase;
+  }
 
   /* Popup modal styles */
   /* You need to implement the modal functionality separately */
@@ -48,6 +51,7 @@
     {%- endif -%}
   </div>
 {%- endunless -%}
+
 <div class="container">
 
   {% for block in section.blocks %}
@@ -58,7 +62,7 @@
         </div>
         <div class="feature-content">
           <h3>{{ block.settings.name }}</h3>
-          <p>{{ block.settings.description }}</p>
+          <p class="sentence">{{ block.settings.description }}</p>
           <button class="learn-more-button">Learn More</button>
         </div>
       </div>
