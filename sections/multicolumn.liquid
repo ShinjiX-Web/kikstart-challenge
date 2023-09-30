@@ -28,11 +28,7 @@
 -%}
 
 <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
-  <div
-    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-    {% if settings.animations_reveal_on_scroll %}
-    data-cascade
-    {% endif %}>
+  <div class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}>
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
         <h2 class="title inline-richtext {{ section.settings.heading_size }}">
@@ -60,10 +56,10 @@
         -%}
         {%- for block in section.blocks -%}
           {%- assign empty_column = '' -%}
-          {%- if block.settings.image == blank
- and block.settings.title == blank
- and block.settings.text == blank
- and block.settings.link_label == blank
+          {%- if block.settings.image == blank 
+ and block.settings.title == blank 
+ and block.settings.text == blank 
+ and block.settings.link_label == blank 
  -%}
             {%- assign empty_column = ' multicolumn-list__item--empty' -%}
           {%- endif -%}
@@ -72,21 +68,14 @@
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
-            {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-            {% endif %}>
+            {% if settings.animations_reveal_on_scroll %}data-cascadestyle="--animation-order: {{ forloop.index }};"{% endif %}>
             <div class="multicolumn-card content-container">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
                 <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
-                  <div
-                    class="media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' %}
-                    style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                    {% endif %}>
+                  <div class="media media--transparent media--{{ section.settings.image_ratio }}" {% if section.settings.image_ratio == 'adapt' %}style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"{% endif %}>
                     {%- liquid
                       assign number_of_columns = section.settings.columns_desktop
                       assign number_of_columns_mobile = section.settings.columns_mobile
@@ -109,12 +98,12 @@
                     {% endcapture %}
                     {{
                        block.settings.image
-                       | image_url: width: 3200
-                       | image_tag:
-                       loading: 'lazy',
-                       widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                       sizes: sizes,
-                       class: 'multicolumn-card__image' }}
+                     | image_url: width: 3200
+                     | image_tag:
+                     loading: 'lazy',
+                     widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                     sizes: sizes,
+                     class: 'multicolumn-card__image' }}
                   </div>
                 </div>
               {%- endif -%}
@@ -126,14 +115,7 @@
                   <div class="rte">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
-                  <a
-                    class="link animate-arrow"
-                    {% if block.settings.link == blank %}
-                    role="link"
-                    aria-disabled="true"
-                    {% else %}
-                    href="{{ block.settings.link }}"
-                    {% endif %}>
+                  <a class="link animate-arrow" {% if block.settings.link == blank %}role="link"aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>
                     {{- block.settings.link_label | escape -}}
                     <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
                   </a>
@@ -173,14 +155,7 @@
     </slider-component>
     <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
       {%- if section.settings.button_label != blank -%}
-        <a
-          class="button button--primary"
-          {% if section.settings.button_link == blank %}
-          role="link"
-          aria-disabled="true"
-          {% else %}
-          href="{{ section.settings.button_link }}"
-          {% endif %}>
+        <a class="button button--primary" {% if section.settings.button_link == blank %}role="link"aria-disabled="true"{% else %}href="{{ section.settings.button_link }}"{% endif %}>
           {{ section.settings.button_label | escape }}
         </a>
       {%- endif -%}
@@ -193,6 +168,9 @@
     "name": "t:sections.multicolumn.name",
     "class": "section",
     "tag": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
     "settings": [
       {
         "type": "inline_richtext",
