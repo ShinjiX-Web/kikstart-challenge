@@ -7,7 +7,7 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Kikstart Challenge<\/strong>",
-            "heading_size": "h1"
+            "heading_size": "hxl"
           }
         },
         "template--21144756846876__6194f399-c58a-416d-aa0d-176207146bad-text-1": {
@@ -67,12 +67,12 @@
         "template--21144756846876__7287578d-e930-4a68-aba1-7ef06b07aabf-column-3"
       ],
       "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
+        "title": "Key Ingredients",
+        "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "button_label": "Button label",
         "button_link": "",
