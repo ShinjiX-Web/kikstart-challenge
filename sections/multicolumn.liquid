@@ -177,9 +177,6 @@ document.querySelectorAll('.open-modal').forEach(function(link) {
 
     const modalTrigger = this.getAttribute('data-modal-trigger');
 
-    // Fetch product information from the metaobject
-    const productInfo = JSON.parse("{{ product.metafields.product_info | json }}");
-
     // Define the modal content using the retrieved data
     const modalContent = `
       <div class="modal-content">
