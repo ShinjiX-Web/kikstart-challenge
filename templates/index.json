@@ -1,5 +1,35 @@
 {
   "sections": {
+    "6194f399-c58a-416d-aa0d-176207146bad": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21144756846876__6194f399-c58a-416d-aa0d-176207146bad-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Kikstart Challenge<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "template--21144756846876__6194f399-c58a-416d-aa0d-176207146bad-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This task aims to assess your qualifications in Shopify front-end development. Together with<br\/>our interviews, this evaluation will identify candidates who possess the technical expertise<br\/>needed to excel on the team.<\/p><p>Below is the section created needed for the task.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21144756846876__6194f399-c58a-416d-aa0d-176207146bad-heading-1",
+        "template--21144756846876__6194f399-c58a-416d-aa0d-176207146bad-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "7287578d-e930-4a68-aba1-7ef06b07aabf": {
       "type": "multicolumn",
       "blocks": {
@@ -55,6 +85,7 @@
     }
   },
   "order": [
+    "6194f399-c58a-416d-aa0d-176207146bad",
     "7287578d-e930-4a68-aba1-7ef06b07aabf"
   ]
 }
