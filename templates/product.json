@@ -110,6 +110,7 @@
           "type": "feature",
           "settings": {
             "enable": true,
+            "image": "shopify:\/\/shop_images\/Mushroom-4.jpg",
             "name": "",
             "description": ""
           }
@@ -118,7 +119,7 @@
           "type": "feature",
           "settings": {
             "enable": true,
-            "image": "shopify:\/\/shop_images\/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg",
+            "image": "shopify:\/\/shop_images\/Mushroom-2.jpg",
             "name": "",
             "description": ""
           }
@@ -127,7 +128,7 @@
           "type": "feature",
           "settings": {
             "enable": true,
-            "image": "shopify:\/\/shop_images\/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg",
+            "image": "shopify:\/\/shop_images\/Mushroom-3.jpg",
             "name": "",
             "description": ""
           }
