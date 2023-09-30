@@ -1,6 +1,8 @@
 {
   "current": {
-    "logo_width": 90,
+    "logo": "shopify:\/\/shop_images\/NP_LOGO_BLACK.svg",
+    "logo_width": 200,
+    "favicon": "shopify:\/\/shop_images\/favicon-32x32_6dee5e5d-c570-42cd-b314-b84c7f34b671.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "asap_n4",
