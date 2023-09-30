@@ -23,9 +23,10 @@
   /* You need to implement the modal functionality separately */
 {% endstyle %}
 
-{% for block in section.blocks %}
-  {% if block.settings.enable %}
-    <div class="container">
+<div class="container">
+
+  {% for block in section.blocks %}
+    {% if block.settings.enable %}
       <div class="feature">
         <div class="feature-image">
           <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.name }}">
@@ -36,10 +37,10 @@
           <button class="learn-more-button">Learn More</button>
         </div>
       </div>
-    </div>
-  {% endif %}
-{% endfor %}
+    {% endif %}
+  {% endfor %}
 
+</div>
 
 {% schema %}
   {
