@@ -96,6 +96,50 @@
     },
     "7c1d69d4-a979-40cf-99e9-9b29c412b296": {
       "type": "custom-product-features",
+      "blocks": {
+        "e56daf70-c19d-4a30-a598-1ffd11dd816b": {
+          "type": "feature",
+          "settings": {
+            "enable": true,
+            "image": "shopify:\/\/shop_images\/Main_c8ff0b5d-c712-429a-be00-b29bd55cbc9d.jpg",
+            "name": "{{ product.metafields.custom.display_names.value.display_name.value }}",
+            "description": ""
+          }
+        },
+        "d2033b95-beef-48cb-baaa-be4990252693": {
+          "type": "feature",
+          "settings": {
+            "enable": true,
+            "image": "shopify:\/\/shop_images\/Main_5127218a-8f6c-498f-b489-09242c0fab0a.jpg",
+            "name": "",
+            "description": ""
+          }
+        },
+        "4f719ae5-4ce7-4cb4-a0fc-1347472ea1e7": {
+          "type": "feature",
+          "settings": {
+            "enable": true,
+            "image": "shopify:\/\/shop_images\/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg",
+            "name": "",
+            "description": ""
+          }
+        },
+        "7c412c37-8380-4f79-a8ad-7d1f06cf00c0": {
+          "type": "feature",
+          "settings": {
+            "enable": true,
+            "image": "shopify:\/\/shop_images\/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg",
+            "name": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "e56daf70-c19d-4a30-a598-1ffd11dd816b",
+        "d2033b95-beef-48cb-baaa-be4990252693",
+        "4f719ae5-4ce7-4cb4-a0fc-1347472ea1e7",
+        "7c412c37-8380-4f79-a8ad-7d1f06cf00c0"
+      ],
       "settings": {
         "title": "Multicolumn",
         "heading_size": "h1",
@@ -104,7 +148,7 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
