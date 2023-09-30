@@ -93,10 +93,30 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "7c1d69d4-a979-40cf-99e9-9b29c412b296": {
+      "type": "custom-product-features",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "7c1d69d4-a979-40cf-99e9-9b29c412b296"
   ]
 }
