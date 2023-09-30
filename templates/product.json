@@ -103,7 +103,7 @@
             "enable": true,
             "image": "shopify:\/\/shop_images\/Mushroom-1.jpg",
             "name": "",
-            "description": ""
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptates ratione aliquam nam quisquam quidem quis esse iure impedit ipsam, molestias quia magnam ut dolorum asperiores vel quam! Eligendi, ea!"
           }
         },
         "d2033b95-beef-48cb-baaa-be4990252693": {
@@ -112,7 +112,7 @@
             "enable": true,
             "image": "shopify:\/\/shop_images\/Mushroom-4.jpg",
             "name": "",
-            "description": ""
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptates ratione aliquam nam quisquam quidem quis esse iure impedit ipsam, molestias quia magnam ut dolorum asperiores vel quam! Eligendi, ea!"
           }
         },
         "4f719ae5-4ce7-4cb4-a0fc-1347472ea1e7": {
@@ -121,7 +121,7 @@
             "enable": true,
             "image": "shopify:\/\/shop_images\/Mushroom-2.jpg",
             "name": "",
-            "description": ""
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptates ratione aliquam nam quisquam quidem quis esse iure impedit ipsam, molestias quia magnam ut dolorum asperiores vel quam! Eligendi, ea!"
           }
         },
         "7c412c37-8380-4f79-a8ad-7d1f06cf00c0": {
@@ -130,7 +130,7 @@
             "enable": true,
             "image": "shopify:\/\/shop_images\/Mushroom-3.jpg",
             "name": "",
-            "description": ""
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptates ratione aliquam nam quisquam quidem quis esse iure impedit ipsam, molestias quia magnam ut dolorum asperiores vel quam! Eligendi, ea!"
           }
         }
       },
@@ -148,8 +148,6 @@
         "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
