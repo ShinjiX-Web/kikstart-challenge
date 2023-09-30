@@ -146,7 +146,7 @@
       ],
       "settings": {
         "title": "<strong>key ingredients<\/strong>",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "circle",
         "columns_desktop": 4,
