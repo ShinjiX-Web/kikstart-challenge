@@ -337,26 +337,26 @@
 
 
 
-        <a href="#" class="open-modal" data-modal-trigger="modal-1">Open Modal</a>
+    <a href="#" class="open-modal" data-modal-trigger="modal-1">Open Modal</a>
 
-    <script>
-        // Event listener for link clicks
-        document.querySelector('.open-modal').addEventListener('click', function(e) {
-            e.preventDefault();
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="sweetalert2.all.min.js"></script>
+<script>
+  // Event listener for link clicks
+  document.querySelector('.open-modal').addEventListener('click', function(e) {
+    e.preventDefault();
 
-            const modalTrigger = this.getAttribute('data-modal-trigger');
+    const modalTrigger = this.getAttribute('data-modal-trigger');
 
-            Swal.fire({
-                title: 'Modal Title',
-                html: '<p>Add your modal content here for ' + modalTrigger + '.</p>',
-                showCloseButton: true,
-                showConfirmButton: false,
-            });
-        });
-    </script>
+    Swal.fire({
+      title: 'Modal Title',
+      html: '<p>Add your modal content here for ' + modalTrigger + '.</p>',
+      showCloseButton: true,
+      showConfirmButton: false,
+    });
+  });
+</script>
 
-    <script type="text/javascript" src="sweetalert2.all.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   </body>
 </html>
