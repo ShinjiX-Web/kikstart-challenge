@@ -167,21 +167,39 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  // Event listener for link clicks
-  document.querySelectorAll('.open-modal').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
+ // Event listener for link clicks
+document.querySelectorAll('.open-modal').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
 
-      const modalTrigger = this.getAttribute('data-modal-trigger');
+    const modalTrigger = this.getAttribute('data-modal-trigger');
 
-      Swal.fire({
-        title: 'Modal Title',
-        html: '<p>Add your modal content here for ' + modalTrigger + '.</p>',
-        showCloseButton: true,
-        showConfirmButton: false,
-      });
+    // Define the modal content as HTML
+    const modalContent = `
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="your-image-url.jpg" alt="Circular Image" class="modal-image">
+          <h2 class="modal-title">${modalTrigger}</h2>
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-subtitle">Subtitle 1</h3>
+          <h3 class="modal-subtitle">Subtitle 2</h3>
+          <p class="modal-description">
+            This is the main description text. You can customize it here.
+          </p>
+        </div>
+      </div>
+    `;
+
+    Swal.fire({
+      title: '', // Leave the title empty
+      html: modalContent, // Use the custom modal content
+      showCloseButton: true,
+      showConfirmButton: false,
     });
   });
+});
+
 </script>
 
 
