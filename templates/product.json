@@ -147,14 +147,14 @@
       "custom_css": [
         ".multicolumn {background: #f7f8f5; padding: 60px 0;}",
         "a,.inline-richtext {text-transform: uppercase; font-weight: 600; color: #294343;}",
-        "a {padding-bottom: 1px; border-bottom-style: solid;border-bottom-width: 1px; width: fit-content;}",
+        "a {padding-bottom: 1px; border-bottom-style: solid; border-bottom-width: 1px; width: fit-content;}",
         "p {color: #5f7f7f;}",
-        ".icon-wrap {display: none; }"
+        ".icon-wrap {display: none;}"
       ],
       "settings": {
         "title": "<strong>key ingredients<\/strong>",
         "heading_size": "h1",
-        "image_width": "half",
+        "image_width": "third",
         "image_ratio": "circle",
         "columns_desktop": 4,
         "column_alignment": "center",
