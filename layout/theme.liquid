@@ -335,5 +335,25 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+
+
+        <a href="#" class="open-modal" data-modal-trigger="modal-1">Open Modal</a>
+
+    <script>
+        // Event listener for link clicks
+        document.querySelector('.open-modal').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const modalTrigger = this.getAttribute('data-modal-trigger');
+
+            Swal.fire({
+                title: 'Modal Title',
+                html: '<p>Add your modal content here for ' + modalTrigger + '.</p>',
+                showCloseButton: true,
+                showConfirmButton: false,
+            });
+        });
+    </script>
+
   </body>
 </html>
