@@ -147,7 +147,9 @@
       "custom_css": [
         ".multicolumn {background: #f7f8f5; padding: 60px 0;}",
         "a,.inline-richtext {text-transform: uppercase; font-weight: 600; color: #294343;}",
-        "p {color: #5f7f7f;}"
+        "a {padding-bottom: 1px; border-bottom-style: solid;border-bottom-width: 1px; width: fit-content;}",
+        "p {color: #5f7f7f;}",
+        ".icon-wrap {display: none; }"
       ],
       "settings": {
         "title": "<strong>key ingredients<\/strong>",
