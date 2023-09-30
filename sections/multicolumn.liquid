@@ -185,7 +185,8 @@ document.querySelectorAll('.open-modal').forEach(function(link) {
       <div class="modal-content">
         <div class="modal-header">
           <div class="modal-image-container">
-            <img src="${custom.pop_up_modal_1}" class="modal-image">
+            <img src="{{ product.metafields.product_info.image_url | img_url: 'large' }}" alt="Product Image">
+
           </div>
           <div class="modal-title-container">
             <h2 class="modal-title">${modalTrigger}</h2>
