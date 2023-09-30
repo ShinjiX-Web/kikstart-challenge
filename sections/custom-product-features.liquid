@@ -1,3 +1,40 @@
+{% style %}
+
+  /* Center-align columns */
+  .feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Circular image */
+  .feature-image img {
+    border-radius: 50%;
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+  }
+
+  /* Popup modal styles */
+  /* You need to implement the modal functionality separately */
+{% endstyle %}
+
+{% for block in section.blocks %}
+  {% if block.settings.enable %}
+    <div class="feature">
+      <div class="feature-image">
+        <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.name }}">
+      </div>
+      <div class="feature-content">
+        <h3>{{ block.settings.name }}</h3>
+        <p>{{ block.settings.description }}</p>
+        <button class="learn-more-button">Learn More</button>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
+
+
 {% schema %}
   {
     "name": "Custom Product Features",
@@ -29,32 +66,8 @@
             "label": "Description",
             "id": "description"
           }
-        ],
-        "presets": [
-          {
-            "name": "Feature",
-            "category": "Custom",
-            "settings": {
-              "enable": true
-            }
-          }
         ]
       }
     ]
   }
 {% endschema %}
-
-{% for block in section.blocks %}
-  {% if block.settings.enable %}
-    <div class="feature">
-      <div class="feature-image">
-        <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.name }}">
-      </div>
-      <div class="feature-content">
-        <h3>{{ block.settings.name }}</h3>
-        <p>{{ block.settings.description }}</p>
-        <button class="learn-more-button">Learn More</button>
-      </div>
-    </div>
-  {% endif %}
-{% endfor %}
