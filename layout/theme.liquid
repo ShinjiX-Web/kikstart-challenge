@@ -335,25 +335,5 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-
-    <script>
-  $(document).ready(function() {
-    // Event listener for link clicks
-    $('.open-modal').click(function(e) {
-      e.preventDefault(); // Prevent the default link behavior
-
-      // Extract the data-modal-trigger attribute to determine the modal ID
-      const modalTrigger = $(this).data('modal-trigger');
-
-      // Show SweetAlert2 modal with custom content
-      Swal.fire({
-        title: 'Modal Title', // Customize the title
-        html: '<p>Add your modal content here for ' + modalTrigger + '.</p>', // Customize the content
-        showCloseButton: true,
-        showConfirmButton: false,
-      });
-    });
-  });
-</script>
   </body>
 </html>
