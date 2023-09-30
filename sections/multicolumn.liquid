@@ -118,7 +118,6 @@
                   <a class="link animate-arrow open-modal" {% if block.settings.link == blank %}role="link"aria-disabled="true"{% else %}href="{{ block.settings.link }}" {% endif %}
                      data-modal-trigger="modal-{{ forloop.index }}">
                     {{- block.settings.link_label | escape -}}
-                    <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
                   </a>
                 {%- endif -%}
               </div>
