@@ -101,7 +101,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg",
-            "title": "{{ product.metafields.custom.display_name.value }}",
+            "title": "{{ product.metafields.custom.display_names.value.display_name.value }}",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
