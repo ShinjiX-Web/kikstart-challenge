@@ -101,8 +101,8 @@
           "type": "feature",
           "settings": {
             "enable": true,
-            "image": "shopify:\/\/shop_images\/Main_c8ff0b5d-c712-429a-be00-b29bd55cbc9d.jpg",
-            "name": "{{ product.metafields.custom.display_names.value.name.value }}",
+            "image": "shopify:\/\/shop_images\/Mushroom-1.jpg",
+            "name": "",
             "description": ""
           }
         },
@@ -110,8 +110,8 @@
           "type": "feature",
           "settings": {
             "enable": true,
-            "image": "shopify:\/\/shop_images\/Main_5127218a-8f6c-498f-b489-09242c0fab0a.jpg",
-            "name": "{{ product.metafields.custom.display_names.value.name.value }}",
+            "image": "shopify:\/\/shop_images\/Mushroom-4.jpg",
+            "name": "",
             "description": ""
           }
         },
@@ -119,7 +119,7 @@
           "type": "feature",
           "settings": {
             "enable": true,
-            "image": "shopify:\/\/shop_images\/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg",
+            "image": "shopify:\/\/shop_images\/Mushroom-2.jpg",
             "name": "",
             "description": ""
           }
@@ -128,7 +128,7 @@
           "type": "feature",
           "settings": {
             "enable": true,
-            "image": "shopify:\/\/shop_images\/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg",
+            "image": "shopify:\/\/shop_images\/Mushroom-3.jpg",
             "name": "",
             "description": ""
           }
@@ -163,7 +163,6 @@
         "template--21144757338396__1ec5d84b-ced3-4e2d-93b0-e125497cb6a2-column-1": {
           "type": "column",
           "settings": {
-            "image": "{{ product.metafields.custom.display_names.value.image.value }}",
             "title": "",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
