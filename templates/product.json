@@ -103,9 +103,9 @@
           "settings": {
             "image": "{{ product.metafields.custom.mushroom_one.value.image.value }}",
             "title": "{{ product.metafields.custom.mushroom_one.value.name.value }}",
-            "text": "{{ product.metafields.custom.mushroom_one.value.brief_description | metafield_tag }}",
+            "text": "<p>{{ product.metafields.custom.mushroom_one.value.brief_description | metafield_tag }}<\/p>",
             "link_label": "{{ product.metafields.custom.link_label.value }}",
-            "link": "{{ product.metafields.custom.mushroom_one.value.system.url }}"
+            "link": "shopify:\/\/metaobjects\/pop_up_modal\/reishi-mushroom"
           }
         },
         "fd85a29c-4c6c-48eb-ac51-a8208c5e65ea": {
