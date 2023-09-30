@@ -511,11 +511,6 @@
   "shopify": {
     "links": {
       "powered_by_shopify": "Energize by Monster Kicker"
-    },
-    "checkout": {
-      "general": {
-        "autocomplete_powered_by_google": "Electrified by {{brandName}}"
-      }
     }
   }
 }
