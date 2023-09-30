@@ -97,52 +97,56 @@
     "a3809a9a-c23c-45ac-9baf-ec7d8bb74244": {
       "type": "multicolumn",
       "blocks": {
-        "template--21144757338396__a3809a9a-c23c-45ac-9baf-ec7d8bb74244-column-1": {
+        "d04bc494-8b06-42d1-a57f-19567af3ca98": {
           "type": "column",
+          "source": "{{ product.metafields.custom.mushroom_one.value }}",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mushroom-4.jpg",
-            "title": "Reishi Mushroom",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "Learn More",
-            "link": ""
+            "image": "{{ product.metafields.custom.mushroom_one.value.image.value }}",
+            "title": "{{ product.metafields.custom.mushroom_one.value.name.value }}",
+            "text": "{{ product.metafields.custom.mushroom_one.value.brief_description | metafield_tag }}",
+            "link_label": "{{ product.metafields.custom.link_label.value }}",
+            "link": "{{ product.metafields.custom.mushroom_one.value.system.url }}"
           }
         },
-        "template--21144757338396__a3809a9a-c23c-45ac-9baf-ec7d8bb74244-column-2": {
+        "fd85a29c-4c6c-48eb-ac51-a8208c5e65ea": {
           "type": "column",
+          "source": "{{ product.metafields.custom.mushroom_2.value }}",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mushroom-2.jpg",
-            "title": "Stinging Nettle",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "Learn More",
-            "link": ""
+            "image": "{{ product.metafields.custom.mushroom_2.value.image.value }}",
+            "title": "{{ product.metafields.custom.mushroom_2.value.name.value }}",
+            "text": "{{ product.metafields.custom.mushroom_2.value.brief_description | metafield_tag }}",
+            "link_label": "{{ product.metafields.custom.link_label.value }}",
+            "link": "{{ product.metafields.custom.mushroom_2.value.system.url }}"
           }
         },
-        "template--21144757338396__a3809a9a-c23c-45ac-9baf-ec7d8bb74244-column-3": {
+        "c10a1459-5e4f-429b-97c9-ef6a91ef7e66": {
           "type": "column",
+          "source": "{{ product.metafields.custom.mushroom_three.value }}",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mushroom-1.jpg",
-            "title": "Gumweed",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "Learn More",
-            "link": ""
+            "image": "{{ product.metafields.custom.mushroom_three.value.image.value }}",
+            "title": "{{ product.metafields.custom.mushroom_three.value.name.value }}",
+            "text": "{{ product.metafields.custom.mushroom_three.value.brief_description | metafield_tag }}",
+            "link_label": "{{ product.metafields.custom.link_label.value }}",
+            "link": "{{ product.metafields.custom.mushroom_three.value.system.url }}"
           }
         },
-        "e58b1987-405d-45d4-970d-d580acc15498": {
+        "5538490c-a0f2-4211-8966-7377aadfea9c": {
           "type": "column",
+          "source": "{{ product.metafields.custom.mushroom_four.value }}",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mushroom-3.jpg",
-            "title": "Eyebright",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "Learn More",
-            "link": ""
+            "image": "{{ product.metafields.custom.mushroom_four.value.image.value }}",
+            "title": "{{ product.metafields.custom.mushroom_four.value.name.value }}",
+            "text": "{{ product.metafields.custom.mushroom_four.value.brief_description | metafield_tag }}",
+            "link_label": "{{ product.metafields.custom.link_label.value }}",
+            "link": "{{ product.metafields.custom.mushroom_four.value.system.url }}"
           }
         }
       },
       "block_order": [
-        "template--21144757338396__a3809a9a-c23c-45ac-9baf-ec7d8bb74244-column-1",
-        "template--21144757338396__a3809a9a-c23c-45ac-9baf-ec7d8bb74244-column-2",
-        "template--21144757338396__a3809a9a-c23c-45ac-9baf-ec7d8bb74244-column-3",
-        "e58b1987-405d-45d4-970d-d580acc15498"
+        "d04bc494-8b06-42d1-a57f-19567af3ca98",
+        "fd85a29c-4c6c-48eb-ac51-a8208c5e65ea",
+        "c10a1459-5e4f-429b-97c9-ef6a91ef7e66",
+        "5538490c-a0f2-4211-8966-7377aadfea9c"
       ],
       "custom_css": [
         ".multicolumn {background: #f7f8f5; padding: 60px 0;}",
