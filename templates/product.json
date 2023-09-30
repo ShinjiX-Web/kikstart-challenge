@@ -145,7 +145,8 @@
         "e58b1987-405d-45d4-970d-d580acc15498"
       ],
       "custom_css": [
-        ".multicolumn {background: #F7F8F5; padding: 60px 0;}"
+        ".multicolumn {background: #f7f8f5; padding: 60px 0;}",
+        "a {text-transform: uppercase; font-weight: 500;}"
       ],
       "settings": {
         "title": "<strong>key ingredients<\/strong>",
