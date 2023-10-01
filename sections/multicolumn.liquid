@@ -20,6 +20,38 @@
       px;
     }
   }
+
+  /* The Modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with transparency */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
 {%- endstyle -%}
 
 {%- liquid
@@ -173,79 +205,14 @@
   </div>
 </div>
 
+<div id="custom-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>This is the content of the modal.</p>
+  </div>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const links = document.querySelectorAll('.link[data-action="show-modal"]');
-    
-    links.forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const metafieldKey = this.getAttribute('data-metafield-key');
-        const productId = this.getAttribute('data-product-id');
-        
-        // Use Shopify AJAX or another method to fetch the metafield value dynamically.
-        // Replace the following line with your own code to fetch the metafield content.
-        const metafieldContent = getMetafieldValue(productId, metafieldKey);
-
-        Swal.fire({
-          title: 'Modal Title',
-          html: metafieldContent,
-          icon: 'info',
-          confirmButtonText: 'OK'
-        });
-      });
-    });
-  });
-
-// Function to fetch the metafield value dynamically using Shopify AJAX.
-function getMetafieldValue(productId, metafieldKey) {
-  // Define the Shopify AJAX URL for fetching metafields.
-  var url = '/admin/api/2021-07/products/' + productId + '/metafields.json';
-
-  // Send a GET request to fetch metafields for the product.
-  $.ajax({
-    url: url,
-    method: 'GET',
-    dataType: 'json',
-    success: function (response) {
-      // Loop through the metafields and find the one with the specified key.
-      for (var i = 0; i < response.metafields.length; i++) {
-        var metafield = response.metafields[i];
-        if (metafield.key === metafieldKey) {
-          // Return the value of the metafield.
-          return metafield.value;
-        }
-      }
-
-      // Return a default value if the metafield is not found.
-      return 'Metafield not found';
-    },
-    error: function (error) {
-      // Handle errors here, e.g., display an error message.
-      console.error('Error fetching metafields: ', error);
-    }
-  });
-}
-
-// Example usage:
-var productId = 8737654800668;
-var metafieldKey = 'custom.pop_up_modal_1';
-
-getMetafieldValue(productId, metafieldKey).then(function (metafieldValue) {
-  Swal.fire({
-    title: 'Modal Title',
-    html: metafieldValue,
-    icon: 'info',
-    confirmButtonText: 'OK'
-  });
-});
-
-</script>
-
 
 {% schema %}
   {
