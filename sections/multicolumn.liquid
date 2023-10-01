@@ -148,17 +148,17 @@
                   <div class="rte">{{ block.settings.text }}</div>
                 {%- endif -%}
           
-  {%- if block.settings.link_label != blank -%}
-  <a class="link animate-arrow" 
-    {% if block.settings.link == blank %}
-      role="link" aria-disabled="true" data-action="no-action"
-    {% else %}
-      href="{{ block.settings.link }}" data-action="show-modal" data-modal-title="{{ block.settings.modal_title | escape }}" data-modal-content="{{ block.settings.modal_content | escape }}"
-    {% endif %}>
-    {{- block.settings.link_label | escape -}}
-    <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
-  </a>
-{%- endif -%}
+                {%- if block.settings.link_label != blank -%}
+                <a class="link animate-arrow" 
+                  {% if block.settings.link == blank %}
+                    role="link" aria-disabled="true" data-action="no-action"
+                  {% else %}
+                    href="{{ block.settings.link }}" data-action="show-modal" data-modal-title="{{ block.settings.modal_title | escape }}" data-modal-content="{{ block.settings.modal_content | escape }}"
+                  {% endif %}>
+                  {{- block.settings.link_label | escape -}}
+                  <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
+                </a>
+              {%- endif -%}
 
               </div>
             </div>
@@ -202,40 +202,6 @@
     </div>
   </div>
 </div>
-
-<!-- Add this HTML to your Shopify theme where you want the modal to appear -->
-<div id="custom-modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p id="modal-content"></p>
-  </div>
-</div>
-
-<button id="open-modal-button">Open Modal</button>
-
-<!-- Include jQuery and add your JavaScript code -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  jQuery(document).ready(function($) {
-    // Open the modal when the button is clicked
-    $('#open-modal-button').click(function() {
-      $('#custom-modal').css('display', 'block');
-      
-      // You can set the modal content here or fetch it dynamically.
-      $('#modal-content').html('This is the content of the modal.');
-    });
-
-    // Close the modal when the close button or overlay is clicked
-    $('.close, .modal').click(function() {
-      $('#custom-modal').css('display', 'none');
-    });
-
-    // Prevent clicks within the modal content from closing it
-    $('.modal-content').click(function(e) {
-      e.stopPropagation();
-    });
-  });
-</script>
 
 
 {% schema %}
