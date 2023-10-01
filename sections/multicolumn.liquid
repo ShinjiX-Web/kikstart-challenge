@@ -229,7 +229,7 @@
     // Open the modal when the button is clicked
     $('#open-modal-button').click(function() {
       var productId = '{{ 8737654800668 }}'; // Replace with the actual product ID
-      var metafieldKey = '{{ pop_up_modal }}'; // Replace with the actual metafield key
+      var metafieldKey = '{{ pop_up_modal.image }}'; // Replace with the actual metafield key
 
       getMetafieldContent(productId, metafieldKey).done(function(response) {
         var metafieldValue = 'Metafield content not found';
