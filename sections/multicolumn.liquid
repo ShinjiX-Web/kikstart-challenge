@@ -177,48 +177,26 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-// Event listener for link clicks
-document.querySelectorAll('.open-modal').forEach(function(link) {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    const modalTrigger = this.getAttribute('data-modal-trigger');
-
-    // Define the modal content using the retrieved data
-    const modalContent = `
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-image-container">
-            <img src="{{ pop_up_modal.image.image_url | img_url: 'large' }}" alt="Product Image">
-
-          </div>
-          <div class="modal-title-container">
-            <h2 class="modal-title">${modalTrigger}</h2>
-          </div>
-        </div>
-        <div class="modal-body">
-          <h3 class="modal-subtitle">${productInfo.subtitle_1}</h3>
-          <h3 class="modal-subtitle">${productInfo.subtitle_2}</h3>
-          <p class="modal-description">
-            ${productInfo.description}
-          </p>
-        </div>
-      </div>
-    `;
-
-    Swal.fire({
-      title: '', // Leave the title empty
-      html: modalContent, // Use the custom modal content
-      showCloseButton: true,
-      showConfirmButton: false,
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.link[data-action="show-modal"]');
+    
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const title = this.getAttribute('data-modal-title');
+        const content = this.getAttribute('data-modal-content');
+        
+        Swal.fire({
+          title: title,
+          html: content,
+          icon: 'info',
+          confirmButtonText: 'OK'
+        });
+      });
     });
   });
-});
-
-
-
 </script>
-
 
 {% schema %}
   {
