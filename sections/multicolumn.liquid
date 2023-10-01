@@ -211,7 +211,22 @@
     <p>This is the content of the modal.</p>
   </div>
 </div>
+<script>
+// Open the modal when a button is clicked
+$('#open-modal-button').click(function() {
+  $('#custom-modal').css('display', 'block');
+});
 
+// Close the modal when the close button or overlay is clicked
+$('.close, .modal').click(function() {
+  $('#custom-modal').css('display', 'none');
+});
+
+// Prevent clicks within the modal from closing it
+$('.modal-content').click(function(e) {
+  e.stopPropagation();
+});
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 {% schema %}
