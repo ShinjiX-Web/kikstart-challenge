@@ -201,15 +201,49 @@
     });
   });
 
-  // Function to fetch the metafield value dynamically (replace with your Shopify AJAX code).
-  function getMetafieldValue(productId, metafieldKey) {
-    // Use Shopify AJAX to fetch the metafield value.
-    // Example:
-    // Shopify.getMetafield(productId, metafieldKey, function(response) {
-    //   return response.value;
-    // });
-    return 'This is the dynamically fetched content.';
-  }
+// Function to fetch the metafield value dynamically using Shopify AJAX.
+function getMetafieldValue(productId, metafieldKey) {
+  // Define the Shopify AJAX URL for fetching metafields.
+  var url = '/admin/api/2021-07/products/' + productId + '/metafields.json';
+
+  // Send a GET request to fetch metafields for the product.
+  $.ajax({
+    url: url,
+    method: 'GET',
+    dataType: 'json',
+    success: function (response) {
+      // Loop through the metafields and find the one with the specified key.
+      for (var i = 0; i < response.metafields.length; i++) {
+        var metafield = response.metafields[i];
+        if (metafield.key === metafieldKey) {
+          // Return the value of the metafield.
+          return metafield.value;
+        }
+      }
+
+      // Return a default value if the metafield is not found.
+      return 'Metafield not found';
+    },
+    error: function (error) {
+      // Handle errors here, e.g., display an error message.
+      console.error('Error fetching metafields: ', error);
+    }
+  });
+}
+
+// Example usage:
+var productId = 8737654800668;
+var metafieldKey = 'custom.pop_up_modal_1';
+
+getMetafieldValue(productId, metafieldKey).then(function (metafieldValue) {
+  Swal.fire({
+    title: 'Modal Title',
+    html: metafieldValue,
+    icon: 'info',
+    confirmButtonText: 'OK'
+  });
+});
+
 </script>
 
 
