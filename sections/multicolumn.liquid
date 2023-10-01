@@ -203,6 +203,69 @@
   </div>
 </div>
 
+<div id="custom-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<button id="open-modal-button">Open Modal</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  jQuery(document).ready(function($) {
+    // Function to fetch metafield content dynamically
+    function getMetafieldContent(productId, metafieldKey) {
+      var url = '/admin/api/2021-07/products/' + productId + '/metafields.json';
+
+      return $.ajax({
+        url: url,
+        method: 'GET',
+        dataType: 'json',
+      });
+    }
+
+    // Open the modal when the button is clicked
+    $('#open-modal-button').click(function() {
+      var productId = '{{ 8737654800668 }}'; // Replace with the actual product ID
+      var metafieldKey = '{{ pop_up_modal }}'; // Replace with the actual metafield key
+
+      getMetafieldContent(productId, metafieldKey).done(function(response) {
+        var metafieldValue = 'Metafield content not found';
+
+        // Check if the response contains metafields
+        if (response.metafields && response.metafields.length > 0) {
+          // Loop through the metafields and find the one with the specified key
+          for (var i = 0; i < response.metafields.length; i++) {
+            var metafield = response.metafields[i];
+            if (metafield.key === metafieldKey) {
+              metafieldValue = metafield.value;
+              break; // Exit the loop once the desired metafield is found
+            }
+          }
+        }
+
+        // Set the modal content
+        $('#modal-content').html(metafieldValue);
+
+        // Display the modal
+        $('#custom-modal').css('display', 'block');
+      });
+    });
+
+    // Close the modal when the close button or overlay is clicked
+    $('.close, .modal').click(function() {
+      $('#custom-modal').css('display', 'none');
+    });
+
+    // Prevent clicks within the modal content from closing it
+    $('.modal-content').click(function(e) {
+      e.stopPropagation();
+    });
+  });
+</script>
+
 
 {% schema %}
   {
