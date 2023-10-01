@@ -184,19 +184,34 @@
       link.addEventListener('click', function (e) {
         e.preventDefault();
         
-        const title = this.getAttribute('data-modal-title');
-        const content = this.getAttribute('data-modal-content');
+        const metafieldKey = this.getAttribute('data-metafield-key');
+        const productId = this.getAttribute('data-product-id');
         
+        // Use Shopify AJAX or another method to fetch the metafield value dynamically.
+        // Replace the following line with your own code to fetch the metafield content.
+        const metafieldContent = getMetafieldValue(productId, metafieldKey);
+
         Swal.fire({
-          title: title,
-          html: content,
+          title: 'Modal Title',
+          html: metafieldContent,
           icon: 'info',
           confirmButtonText: 'OK'
         });
       });
     });
   });
+
+  // Function to fetch the metafield value dynamically (replace with your Shopify AJAX code).
+  function getMetafieldValue(productId, metafieldKey) {
+    // Use Shopify AJAX to fetch the metafield value.
+    // Example:
+    // Shopify.getMetafield(productId, metafieldKey, function(response) {
+    //   return response.value;
+    // });
+    return 'This is the dynamically fetched content.';
+  }
 </script>
+
 
 {% schema %}
   {
