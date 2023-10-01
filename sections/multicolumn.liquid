@@ -117,12 +117,19 @@
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
                 {%- endif -%}
-                {%- if block.settings.link_label != blank -%}
-                  <a class="link animate-arrow open-modal" {% if block.settings.link == blank %}role="link"aria-disabled="true"{% else %}href="{{ block.settings.link }}" {% endif %}
-                     data-modal-trigger="modal-{{ forloop.index }}">
-                    {{- block.settings.link_label | escape -}}
-                  </a>
-                {%- endif -%}
+          
+  {%- if block.settings.link_label != blank -%}
+  <a class="link animate-arrow" 
+    {% if block.settings.link == blank %}
+      role="link" aria-disabled="true" data-action="no-action"
+    {% else %}
+      href="{{ block.settings.link }}" data-action="show-modal" data-modal-title="{{ block.settings.modal_title | escape }}" data-modal-content="{{ block.settings.modal_content | escape }}"
+    {% endif %}>
+    {{- block.settings.link_label | escape -}}
+    <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
+  </a>
+{%- endif -%}
+
               </div>
             </div>
           </li>
@@ -190,10 +197,10 @@ document.querySelectorAll('.open-modal').forEach(function(link) {
           </div>
         </div>
         <div class="modal-body">
-          <h3 class="modal-subtitle">${pop_up_modal.image.subtitle_1}</h3>
-          <h3 class="modal-subtitle">${pop_up_modal.image.subtitle_2}</h3>
+          <h3 class="modal-subtitle">${productInfo.subtitle_1}</h3>
+          <h3 class="modal-subtitle">${productInfo.subtitle_2}</h3>
           <p class="modal-description">
-            ${pop_up_modal.image.description}
+            ${productInfo.description}
           </p>
         </div>
       </div>
