@@ -195,7 +195,7 @@
     </slider-component>
     <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
       {%- if section.settings.button_label != blank -%}
-        <a class="button button--primary" {% if section.settings.button_link == blank %}role="link"aria-disabled="true"{% else %}href="{{ section.settings.button_link }}"{% endif %}>
+        <a id="open-modal-button" class="button button--primary" {% if section.settings.button_link == blank %}role="link"aria-disabled="true"{% else %}href="{{ section.settings.button_link }}"{% endif %}>
           {{ section.settings.button_label | escape }}
         </a>
       {%- endif -%}
@@ -209,8 +209,6 @@
     <div id="modal-content"></div>
   </div>
 </div>
-
-<button id="open-modal-button">Open Modal</button>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
